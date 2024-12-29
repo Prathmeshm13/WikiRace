@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWikiLinks from "./wikiLinks";
 import LinkList from "./linkList";
+import SearchComponent from "./searchBox";
 
 function GamePlay() {
   let [currLink, setCurrLink] = useState("Nagpur");
@@ -64,7 +65,7 @@ function GamePlay() {
           ></div>{" "}
         </div>
         <div className="flex-col">
-          <LinkList links={links}/>
+          <SearchComponent data={links}/>
         </div>
       </div>
       <div className="flex items-center justify-center p-7">
